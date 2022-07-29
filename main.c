@@ -18,9 +18,9 @@ void main()
         printf ("[%i] = %u\n", i, arr[i]);
     }
 
-    ccl_hash_t x = 55000;
+    ccl_hash_t x = 123;
 
-    ccl_hash_t* c = ccl_find(arr, 9, &x, sizeof(ccl_hash_t));
+    ccl_hash_t* c = ccl_find_hash(arr, 9, x);
 
     if (c) {
     printf("Found: [%u] = %u\n", c-arr, *c); }

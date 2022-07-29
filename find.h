@@ -2,13 +2,13 @@
 #define CCL_FIND_H
 
 #include <stddef.h>
-#include "hash.h"
+#include  "hash.h"
 
 /*
- * algorithm: binary search (sorted array only)
+ * algorithm: optimized binary search (sorted array only)
  */
 
    void*    ccl_find      (   void*    array, size_t len,    void*   key, size_t key_size);
 ccl_hash_t* ccl_find_hash (ccl_hash_t* array, size_t len, ccl_hash_t key);
 
-#endif
+#endif /*!CCL_FIND_H*/
