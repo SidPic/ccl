@@ -10,7 +10,7 @@ void main()
     const char* str = "H";
     __auto_type a = ccl_hash(str, str + strlen(str));
     __auto_type b = ccl_hash_str(str);
-    printf("%u\n%u\n================\n", a, b);
+    printf("%llu\n%llu\n================\n", a, b);
 
     ccl_hash_t arr[9] = { 1, 32, 76, 123, 3232, 3234, 4501, 55000, 111111 };
 
@@ -18,9 +18,9 @@ void main()
         printf ("[%i] = %u\n", i, arr[i]);
     }
 
-    ccl_hash_t x = -1;
+    ccl_hash_t x = 55000;
 
-    __auto_type c = ccl_find_hash(arr, 9, x);
+    ccl_hash_t* c = ccl_find(arr, 9, &x, sizeof(ccl_hash_t));
 
     if (c) {
     printf("Found: [%u] = %u\n", c-arr, *c); }
