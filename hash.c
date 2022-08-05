@@ -16,7 +16,7 @@ ccl_hash_t ccl_hash_str (const char* str) {
     return hval;
 }
 
-ccl_hash_t ccl_hash (const char* data, const char* end_of_data) {
+ccl_hash_t ccl_hash (const ccl_byte_t* data, const ccl_byte_t* end_of_data) {
     ccl_hash_t hval = CCL_HASH_INIT;
 
     while (data != end_of_data) {
